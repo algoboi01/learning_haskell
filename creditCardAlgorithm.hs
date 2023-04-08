@@ -1,6 +1,5 @@
 -- not working, needs to be worked upon.
 module CreditCardAlgorithm where
-import qualified GHC.TypeLits as upon
 
 -- (works) Doubles every next number in the list
 doubleEveryTwo :: [Integer] -> [Integer]
