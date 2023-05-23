@@ -10,4 +10,4 @@ digs x = digs (x `div` 10) ++ [x `mod` 10]
 
 seperateDigits :: [Integer] -> [Integer]
 seperateDigits [] = []
-
+seperateDigits (x:xs) = 

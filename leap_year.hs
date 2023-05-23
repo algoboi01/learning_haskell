@@ -1,4 +1,12 @@
 module Leap_Year where
 
-leap_year :: Int -> Bool
-leap_year year = if (year `mod` 4) == 0 then True else if (year `mod` 100) == 0 then True else if (year `mod` 400) == 0 then True else False
+isLeapYear :: Int -> Bool
+isLeapYear year
+  | year `mod` 400 == 0 = True
+  | year `mod` 100 == 0 = False
+  | year `mod` 4 == 0   = True
+  | otherwise           = False
+
+
+main = do
+  putStrLn $ show $ isLeapYear 2020

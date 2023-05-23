@@ -15,4 +15,5 @@ isRed :: Color -> Bool
 isRed Red  = True
 isRed _ = False
 
-
+main = do
+   putStrLn $ show $ isRed Green

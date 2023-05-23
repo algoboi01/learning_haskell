@@ -3,7 +3,7 @@ module PreetyStub where
 import SimpleJSON
 
 data Doc = ToBeDefined
-         deriving (Show)
+    deriving (Show)
 
 string :: String -> Doc
 string str = undefined
