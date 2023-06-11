@@ -10,11 +10,9 @@ data Thing = Shoe
   
 -- show
 isSmall :: Thing -> Bool
-isSmall Shoe       = True
 isSmall Ship       = False
-isSmall SealingWax = True
-isSmall Cabbage    = True
 isSmall King       = False
+isSmall _          = True
 
 main = print (isSmall Cabbage)
 
@@ -38,8 +36,9 @@ main2 = print (safeDiv 2 0, safeDiv 3 4)
 
 -- show
 failureToZero :: FailableDouble -> Double
-failureToZero Failure = 0
-failureToZero (OK d) = d
+failureToZero x = case x of
+  Failure -> 0
+  OK d    -> d
 
 main3 = print (failureToZero Failure, failureToZero (OK 3.4))
 
@@ -58,3 +57,27 @@ getAge :: Person -> Int
 getAge (Person _ a _) = a
 
 main4 = print (getAge brent)
+
+baz :: Person -> String
+baz p@(Person n _ _) = "The name field of (" ++ show p ++ ") is " ++ n
+
+main5 = putStrLn (baz brent)
+
+data IntList = Empty | Cons Int IntList
+  deriving Show
+
+-- show
+intListProd :: IntList -> Int
+intListProd Empty = 1
+intListProd (Cons x xs) = x * intListProd xs
+
+main6 = print $ intListProd $ Cons 3 $ Cons 2 $ Cons 4 Empty
+
+data Tree = Leaf Char
+          | Node Tree Int Tree
+  deriving Show
+
+tree :: Tree
+tree = Node (Leaf 'x') 1 (Node (Leaf 'y') 2 (Leaf 'z'))
+
+main7 = print tree

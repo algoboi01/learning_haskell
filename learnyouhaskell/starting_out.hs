@@ -14,7 +14,7 @@ filter' p (x:xs)
 
 quicksort :: (Ord a) => [a] -> [a]
 quicksort [] = []
-quicksort (x:xs) = 
+quicksort (x:xs) =
    let smallerSorted = quicksort (filter (<=x) xs)
        biggerSorted  = quicksort (filter (>x) xs)
    in smallerSorted ++ [x] ++ biggerSorted
@@ -25,9 +25,9 @@ largestDivisible = head (filter p [100000,99999..])
 
 squareOddNumbers ::  [Int] -> [Int]
 squareOddNumbers [] = []
-squareOddNumbers (x:xs) = if x==0 then [] else [x * x] ++ squareOddNumbers xs
+squareOddNumbers (x:xs) = if x==0 then [] else (x * x) : squareOddNumbers xs
 
-quadratic a b c  
+quadratic a b c
          | disc > 0 = 2
          | disc == 0 = 1
          | otherwise = 0

@@ -11,3 +11,5 @@ main = do
   let (randomNumber, newGen) = randomR (1, 100) gen :: (Int, StdGen)
   putStrLn $ "Random number: " ++ show randomNumber
 
+  main
+
