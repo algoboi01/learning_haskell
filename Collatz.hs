@@ -6,7 +6,7 @@ module Collatz where
 checkNumber :: Integer -> Integer
 checkNumber n = if even n then divide else tripleAdd
   where divide = div n 2
-        tripleAdd = 3*n + 1
+               tripleAdd = 3*n + 1
 
 collatz :: Integer -> Integer
 collatz 1 = 0

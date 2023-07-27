@@ -7,6 +7,5 @@ isLeapYear year
   | year `mod` 4 == 0   = True
   | otherwise           = False
 
-
 main = do
   putStrLn $ show $ isLeapYear 2020

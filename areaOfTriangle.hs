@@ -1,4 +1,4 @@
-module HeronsFormula where
+module AreaOfTriangle where
 
 areaTriangleTrig  a b c = c * height / 2   -- use trigonometry
     where
@@ -9,4 +9,4 @@ areaTriangleTrig  a b c = c * height / 2   -- use trigonometry
 areaTriangleHeron a b c = result           -- use Heron's formula
     where
     result = sqrt (s * (s - a) * (s - b) * (s - c))
-    s      = (a + b + c) / 2 -- semi-perimeter
+    s          = (a + b + c) / 2 -- semi-perimeter
