@@ -1,11 +1,11 @@
 module Question5 where
 
-factorial :: Integer -> Integer
-factorial x = product [1..x]
+-- assuming LCM function to be already defined here
 
-multiple :: Integer -> Integer -> [Integer]
-multiple a b = [ a * x | x <- [1..b]]
+lcmList :: [Integer] -> Integer
+lcmList [x] = x
+lcmList (x:y:xs) = lcmList $ [lcm x y] ++ xs
 
-scm :: [Integer] -> [Integer] -> [Integer]
-scm (x:xs) y = if x `elem` y then [x] else scm xs y
+main = do
+   putStrLn $ show $ lcmList [1..20] -- prints out 232792560
 
