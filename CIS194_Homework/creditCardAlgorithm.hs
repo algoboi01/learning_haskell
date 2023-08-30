@@ -1,6 +1,6 @@
 -- CIS 194 : Homework 1
 -- https://www.seas.upenn.edu/~cis1940/spring13/hw/01-intro.pdf
--- Ex 1 to 5
+-- Ex 1 to 4
 -- Works as expected (atleast for now. On my machine)
 module CreditCardAlgorithm where
 
