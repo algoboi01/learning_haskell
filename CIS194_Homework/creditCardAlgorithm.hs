@@ -2,6 +2,12 @@
 -- https://www.seas.upenn.edu/~cis1940/spring13/hw/01-intro.pdf
 -- Ex 1 to 4
 -- Works as expected (atleast for now. On my machine)
+{-# OPTIONS_GHC -Wno-unrecognised-pragmas #-}
+{-# HLINT ignore "Use foldr" #-}
+{-# HLINT ignore "Use even" #-}
+{-# HLINT ignore "Use :" #-}
+{-# HLINT ignore "Move brackets to avoid $" #-}
+{-# HLINT ignore "Use print" #-}
 module CreditCardAlgorithm where
 
 -- unwraps the digits of a number and saves it in a list
