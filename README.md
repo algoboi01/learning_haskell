@@ -1,6 +1,6 @@
 # Learning Haskell
 
-This is me learning Haskelli by doing problems and projects. 
+This is me learning Haskell by doing problems and projects. 
 Here you can find programs that I write while learning concepts and syntax of the language.
 Maybe you can find a code snippet in this repo which might be useful to you or might encourage you to start learning Haskell as well.
 This is an ongoing learning experience and the repo will be updated with new projects and problem solutions.
