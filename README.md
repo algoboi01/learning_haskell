@@ -10,39 +10,39 @@ Below is the list and gist of each folder contents.
 
 Homework problem solutions from the course CIS 194 taught at UPenn. (Entirely my solutions)
 
-[Course Website] (https://www.seas.upenn.edu/~cis1940/spring13/)
+Course Website : (https://www.seas.upenn.edu/~cis1940/spring13/)
 
 ### HTML_Blog
 
 Implementation of a simple static blog generator in Haskell, converting documents written in our own custom markup language to HTML.
 
-[Tutorial/Docs Link] (https://lhbg-book.link/)
+Tutorial/Docs Link : (https://lhbg-book.link/)
 
 ### JSON_Parse
 
 Writing a JSON Parser from scratch in Haskell.
 
-[Tutorial/Docs Link] (https://abhinavsarkar.net/posts/json-parsing-from-scratch-in-haskell/)
+Tutorial/Docs Link : (https://abhinavsarkar.net/posts/json-parsing-from-scratch-in-haskell/)
 
 ### Blockchain
 
 Implementation of concepts of a blockchain from scratch in Haskell.
 I also have done this in python. (Very simple implementation of proof of work) 
 
-[Link to the Github repo] (https://github.com/algoboi01/python_blockchain)
+Link to the Github repo : (https://github.com/algoboi01/python_blockchain)
 
 ### LearnYouHaskell
 
 Code snippets and exercise solutions from the book "Learn You Haskell for Greater Good" by  Miran Lipovača 
 
-[Link to the book website] (http://learnyouahaskell.com/)
+Link to the book website : (http://learnyouahaskell.com/)
 
 ### projectEuler
 
 Project Euler is a series of challenging mathematical/computer programming problems that will require more than just mathematical insights to solve. 
 Providing all solutions in Haskell from scratch. (Might not be efficient but anyways)
 
-[Link to Project Euler website] (https://projecteuler.net/about)
+Link to Project Euler website : (https://projecteuler.net/about)
 
 ### simplePrograms
 
