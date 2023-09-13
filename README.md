@@ -54,10 +54,3 @@ This is where my debug code is. Here I put down the code which I find on the web
 Also this contains code snippets which can be useful in further projects.
 Also contains useless code sometimes.
 
-## RealWorldHaskell
-
-Trying out code snippets and providing my dumb solutions to the exercises problem from the book "Real World Haskell" by Bryan O'Sullivan, Don Stewart, and John Goerzen
-Also provided as a reading supplement for the CIS194 Course mentioned above.
-
-Link to the book website: https://book.realworldhaskell.org/
-
