@@ -28,6 +28,12 @@ parseMessage x
 combineString :: [String] -> String
 combineString [] = ""
 combineString (x:xs) = x ++ " " ++ combineString xs -- leaves a space at the end but anyways
-
--- parse :: String -> [LogMessage]
+!
+-- Resumed on Oct 9, 23
+--
+-- Parses the entire Log File
+parse :: String -> [LogMessage]
+parse x
+  | x == []   = error "EMPTY FILE"
+  | otherwise = map parseMessage (lines x)
 
