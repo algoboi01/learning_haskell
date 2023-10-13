@@ -1,13 +1,12 @@
 -- https://www.seas.upenn.edu/~cis1940/spring13/hw/02-ADTs.pdf
--- such inefficient solutions posted here (hehe)
- 
+-- Such inefficient solutions posted here (hehe)
+-- Sorry for some horrible code (warning)
+--
 module LogAnalysis where
 
 import Log
 
 -- Excercise 1 Solution
--- it works (the way it should i guess)
--- ignore the rule of meaningful argument & function names
 parseMessage :: String -> LogMessage
 parseMessage x
     | head s == "E" = LogMessage (Error error_type) timestamp_r message_r
@@ -23,17 +22,33 @@ parseMessage x
          -- for other Log message types (Warning, Info)
          timestamp   = read $ s !! 1
          message     = combineString $ drop 2 s
-
+        
 -- Creates a string from a list containing String elements
 combineString :: [String] -> String
 combineString [] = ""
 combineString (x:xs) = x ++ " " ++ combineString xs -- leaves a space at the end but anyways
-!
--- Resumed on Oct 9, 23
---
+
 -- Parses the entire Log File
 parse :: String -> [LogMessage]
 parse x
   | x == []   = error "EMPTY FILE"
   | otherwise = map parseMessage (lines x)
+
+
+-- Exercise 2 solution
+-- Inserts the log messages in the order by checking the timestamp
+insert :: LogMessage -> MessageTree -> MessageTree
+insert (Unknown _) tree = tree
+insert logMessage Leaf = Node Leaf logMessage Leaf
+insert logMessage (Node leftTree previousMessage rightTree)
+   | getTimestamp logMessage <= getTimestamp previousMessage = Node (insert logMessage leftTree) previousMessage rightTree
+   | otherwise = Node leftTree previousMessage (insert logMessage rightTree)
+   
+   where
+     -- gets the timestamp from the LogMessage
+     getTimestamp :: LogMessage -> Int
+     getTimestamp (Unknown _) = 0
+     getTimestamp (LogMessage _ timestamp _) = timestamp
+
+
 
