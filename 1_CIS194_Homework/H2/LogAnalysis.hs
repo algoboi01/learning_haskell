@@ -36,21 +36,6 @@ parse x
 
 
 -- Exercise 2 solution
--- Inserts the log messages in the order by checking the timestamp
+-- redoing it from the start, made a mistake
+
 insert :: LogMessage -> MessageTree -> MessageTree
--- Unknown messages should not be stored as they contain no timestamp and the tree should remain unchanged.
-insert (Unknown _) tree = tree
-insert logMessage Leaf = Node Leaf logMessage Leaf
-insert logMessage (Node leftTree previousMessage rightTree)
-   | getTimestamp logMessage <= getTimestamp previousMessage = Node (insert logMessage leftTree) previousMessage rightTree
-   | otherwise = Node leftTree previousMessage (insert logMessage rightTree)
-   
-   where
-     -- returns the timestamp from the log messages
-     getTimestamp :: LogMessage -> Int
-     getTimestamp (Unknown _) = 0
-     getTimestamp (LogMessage _ timestamp _) = timestamp
-
-
--- Exercise 3 solution
--- build :: [LogMessage] -> MessageTree
